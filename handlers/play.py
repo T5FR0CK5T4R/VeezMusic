@@ -595,9 +595,9 @@ async def play(_, message: Message):
             user = user_name
             emojilist = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣"]
             while j < 5:
-                toxxt += f"{emojilist[j]} [{results[j]['title'][:25]}...](https://youtube.com{results[j]['url_suffix']})\n"
-                toxxt += f" ├ 💡 **Duration** - `{results[j]['duration']}`\n"
-                toxxt += f" └ ⚡ __Powered by {BOT_NAME} AI__\n\n"
+                toxxt += f"{emojilist[j]} {results[j]<b>['title']}<b>\n"
+                toxxt += f" ├ ⏱️ **Duration** - `{results[j]['duration']}`\n"
+                toxxt += f" └ 🥀 __Powered by {BOT_NAME} AI__\n\n"
                 j += 1
             keyboard = InlineKeyboardMarkup(
                 [
@@ -647,7 +647,7 @@ async def play(_, message: Message):
                 results[0]["views"]
             except Exception as e:
                 await lel.edit(
-                    "😕 **couldn't find song you requested**\n\n» **please provide the correct song name or include the artist's name as well**"
+                    "😕 **Couldn't Find Song You Requested**\n\n» **Please Provide The Correct Song Name Or Include The Artist's Name As Well**"
                 )
                 print(str(e))
                 return
@@ -694,7 +694,7 @@ async def play(_, message: Message):
             callsmusic.pytgcalls.join_group_call(chat_id, file_path)
         except:
             await lel.edit(
-                "😕 **voice chat not found**\n\n» please turn on the voice chat first"
+                "😕 **Voice Chat Not Found**\n\n» Please Turn On The Voice Chat First"
             )
             return
         await message.reply_photo(
