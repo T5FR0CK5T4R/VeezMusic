@@ -43,7 +43,7 @@ async def _human_time_duration(seconds):
 
 
 @Client.on_message(
-    command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
+    command(["fstart", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
@@ -145,15 +145,15 @@ async def help_(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📚 Basic Cmd", callback_data="cbbasic"),
-                    InlineKeyboardButton("📕 Advanced Cmd", callback_data="cbadvanced"),
+                    InlineKeyboardButton(" Basic Cmd", callback_data="cbbasic"),
+                    InlineKeyboardButton(" Advanced Cmd", callback_data="cbadvanced"),
                 ],
                 [
-                    InlineKeyboardButton("📘 Admin Cmd", callback_data="cbadmin"),
-                    InlineKeyboardButton("📗 Sudo Cmd", callback_data="cbsudo"),
+                    InlineKeyboardButton(" Admin Cmd", callback_data="cbadmin"),
+                    InlineKeyboardButton(" Sudo Cmd", callback_data="cbsudo"),
                 ],
-                [InlineKeyboardButton("📙 Owner Cmd", callback_data="cbowner")],
-                [InlineKeyboardButton("📔 Fun Cmd", callback_data="cbfun")],
+                [InlineKeyboardButton(" Owner Cmd", callback_data="cbowner")],
+                [InlineKeyboardButton(" Fun Cmd", callback_data="cbfun")],
             ]
         ),
     )
