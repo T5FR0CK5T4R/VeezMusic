@@ -520,7 +520,7 @@ async def play(_, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/TSFNETWORK"
                     )
                 ],
             ]
